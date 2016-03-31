@@ -1,24 +1,25 @@
 extends layout
 
 block content
-  div.container(ng-app="projectApp" ng-controller="projectController")
-    
-    div.jumbotron.jumbtron-fluid
-      h1(style="text-align:center;") Projects
-    
-    div.col-md-12(style="margin-bottom:5rem;")
-      h2(style="text-align:center;") Github
+  div.container(ng-app="app" ng-controller="projectController")
+  
+    div.col-md-12.col-sm-12(style="margin-bottom:5rem;")
+      div.jumbotron
+        h1(style="text-align:center;") Projects
+        
+      h2(style="text-align:center;") Github 
+        i.fa.fa-github
+      br
+
       div(ng-repeat="repo in repos" ng-init="repoIndex = $index")
-        div.col-md-6
-          div.card
-            div.card-header
-              a(href="{{repo.html_url}}" target="_blank")
-                h4.card-title {{repo.name}}
-            div.card-block
-              p.card-text {{repo.description}}
-            div.card-footer
-              small(ng-repeat="(k,v) in languages[repoIndex]").text-muted
-                b{{k}} 
+          div.card.col-md-6.col-xs-12
+            div.panel.panel-default
+              div.panel-body
+                a(href="{{repo.html_url}}" target="_blank")
+                  h4.card-title {{repo.name}}
+                p.card-text {{repo.description}}
+                small(ng-repeat="(k,v) in languages[repoIndex]").text-muted
+                  b{{k}} 
   //
     div.col-md-12
       h2(style="text-align:center;") CodePen

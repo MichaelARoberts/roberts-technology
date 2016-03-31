@@ -2,10 +2,23 @@ doctype html
 html
   head
     title= title
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
   body
+    div.collapse.navbar-collapse
+      a(href="/").navbar-brand Michael Roberts
+      ul.nav.navbar-nav
+        li.nav-item
+          a(href="/").nav-link Home
+        li.nav-item
+          a(href="/projects").nav-link Projects
+        li.nav-item
+          a(href="/about").nav-link About
+        li.nav-item
+          a(href="/resources").nav-link Resources
+          
     block content
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js")
-    script(src="./javascripts/controllers/project-controller.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    script(src="./javascripts/controllers/roberts-controller.js")

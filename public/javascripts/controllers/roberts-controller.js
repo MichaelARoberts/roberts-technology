@@ -1,6 +1,6 @@
-var projectApp = angular.module('projectApp', [])
+var app = angular.module('app', [])
 
-projectApp.controller('projectController', function($scope, $http){
+app.controller('projectController', function($scope, $http){
 
   $scope.languages = []
   $scope.repos = undefined
@@ -13,7 +13,5 @@ projectApp.controller('projectController', function($scope, $http){
         $scope.languages.push(langsResponse.data)
       })
     }
-
-
   })
 })
