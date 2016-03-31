@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  div.container(ng-app="projectApp" ng-controller="projectController")
+    
+    div.jumbotron.jumbtron-fluid
+      h1(style="text-align:center;") Projects
+    
+    div.col-md-12(style="margin-bottom:5rem;")
+      h2(style="text-align:center;") Github
+      div(ng-repeat="repo in repos" ng-init="repoIndex = $index")
+        div.col-md-6
+          div.card
+            div.card-header
+              a(href="{{repo.html_url}}" target="_blank")
+                h4.card-title {{repo.name}}
+            div.card-block
+              p.card-text {{repo.description}}
+            div.card-footer
+              small(ng-repeat="(k,v) in languages[repoIndex]").text-muted
+                b{{k}} 
+  //
+    div.col-md-12
+      h2(style="text-align:center;") CodePen
+      p.codepen(data-height='257', data-theme-id='23125', data-slug-hash='dMRxWr', data-default-tab='result', data-user='MARoberts', data-preview='true')
+        | See the Pen 
+        a(href='http://codepen.io/MARoberts/pen/dMRxWr/') Search Tags
+        |  by Michael Roberts (
+        a(href='http://codepen.io/MARoberts') @MARoberts
+        | ) on 
+        a(href='http://codepen.io') CodePen
+        | .
+      script(async='', src='//assets.codepen.io/assets/embed/ei.js')
+        
