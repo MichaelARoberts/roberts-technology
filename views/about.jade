@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+    div.col-md-6.col-xs-12
+      div.panel.panel-default
+        h3(style="text-align:center;")
+          i(style="padding-right:2rem;").fa.fa-graduation-cap.fa-lg
+          | Education
+        ul.list-group
+          li.list-group-item
+            p Hello World!
+         
+    div.col-md-6.col-xs-12
+      div.panel.panel-default
+        h3(style="text-align:center;")
+          i(style="padding-right:2rem;").fa.fa-briefcase.fa-lg
+          | Career

@@ -4,6 +4,7 @@ html
     title= title
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/css/custom.css")
   body
     nav.navbar.navbar-default
       div.container-fluid
@@ -17,13 +18,28 @@ html
         div.collapse.navbar-collapse#navbar-target
           ul.nav.navbar-nav
             li.nav-item
-              a(href="/").nav-link Home
+              a(href="/about").nav-link About
             li.nav-item
               a(href="/projects").nav-link Projects
             li.nav-item
-              a(href="/about").nav-link About
+              a(href="/skills").nav-link Skills
             li.nav-item
               a(href="/resources").nav-link Resources
+          ul.nav.navbar-nav.navbar-right
+            li.nav-item
+              div.navbar-btn.btn-group
+                a.btn.btn-primary
+                  i(style="padding-right:1rem;").fa.fa-github
+                  | Github
+                a.btn.btn-primary
+                  i(style="padding-right:1rem;").fa.fa-linkedin
+                  | LinkedIn
+                a.btn.btn-primary
+                  i(style="padding-right:1rem;").fa.fa-twitter
+                  | Twitter
+                
+                  
+              
           
     block content
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js")

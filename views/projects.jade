@@ -4,8 +4,6 @@ block content
   div.container(ng-app="app" ng-controller="projectController")
   
     div.col-md-12.col-sm-12(style="margin-bottom:5rem;")
-      div.jumbotron
-        h1(style="text-align:center;") Projects
         
       h2(style="text-align:center;") Github 
         i.fa.fa-github
@@ -20,16 +18,4 @@ block content
                 p.card-text {{repo.description}}
                 small(ng-repeat="(k,v) in languages[repoIndex]").text-muted
                   b{{k}} 
-  //
-    div.col-md-12
-      h2(style="text-align:center;") CodePen
-      p.codepen(data-height='257', data-theme-id='23125', data-slug-hash='dMRxWr', data-default-tab='result', data-user='MARoberts', data-preview='true')
-        | See the Pen 
-        a(href='http://codepen.io/MARoberts/pen/dMRxWr/') Search Tags
-        |  by Michael Roberts (
-        a(href='http://codepen.io/MARoberts') @MARoberts
-        | ) on 
-        a(href='http://codepen.io') CodePen
-        | .
-      script(async='', src='//assets.codepen.io/assets/embed/ei.js')
         
