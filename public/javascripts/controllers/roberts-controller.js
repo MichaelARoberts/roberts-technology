@@ -15,3 +15,51 @@ app.controller('projectController', function($scope, $http){
     }
   })
 })
+
+app.controller('aboutController', function($scope){
+  $scope.education = [
+    {
+      name: 'Champlain College',
+      graddate : '2018',
+      degree: 'BS in Computer and Digital Forensics',
+      minor: 'Minor in Computer Science',
+      classes: [
+        'Forensic Tool Evaluation',
+        'Anti-Forensics and Network Forensics',
+        'Intro to Networking',
+        'Systems Software',
+        'Criminal Law',
+        'Cyber Crime and Digital Investigation',
+        'Law of Digtial Evidence',
+        'Intro to Computer Theory',
+        'Intro to Digital Forensics'
+      ]
+    }
+  ]
+  $scope.career = [
+    {
+      name : 'Icila',
+      position : 'CTO',
+      start_date : 'February 2016',
+      end_date : 'present',
+      desc : [
+        'Developed RESTful API and iOS prototypes',
+        'Created Tech-Roadmap',
+        'Lead testing of numerous iterations of software'
+      ]
+    },
+    {
+      name : 'Leahy Center for Digital Investigation',
+      position : 'Intern, Research Assistant 1',
+      start_date : 'January 2015',
+      end_date : 'present',
+      desc : [
+        'Lead talks at Schools about digital security, and digital citizenship',
+        'Developed games in Unity3D to teach youth about digital citizenship',
+        'Edited movies, audio, and photos for public relations',
+        'Analyzed decompiled software',
+        'Helped develop HIPAA compliance'
+      ]
+    }
+  ]
+})

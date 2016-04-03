@@ -1,18 +1,33 @@
 extends layout
 
 block content
-  div.container
-    div.col-md-6.col-xs-12
+  div.container(ng-app="app" ng-controller="aboutController")
+    div.col-md-6.col-xs-12.animated.fadeInLeft
       div.panel.panel-default
         h3(style="text-align:center;")
           i(style="padding-right:2rem;").fa.fa-graduation-cap.fa-lg
           | Education
-        ul.list-group
+        ul.list-group(ng-repeat="ed in education" ng-init="edIndex = $index")
           li.list-group-item
-            p Hello World!
+            h4 {{ed.name}}
+            h5 Graduates {{ed.graddate}}
+            p {{ed.degree}}
+              br
+              span.text-muted {{ed.minor}}
+            p Classes
+            ul(ng-repeat="class in education[edIndex].classes")
+              li {{class}}
          
-    div.col-md-6.col-xs-12
+    div.col-md-6.col-xs-12.animated.fadeInRight
       div.panel.panel-default
         h3(style="text-align:center;")
           i(style="padding-right:2rem;").fa.fa-briefcase.fa-lg
           | Career
+        ul.list-group(ng-repeat="cr in career" ng-init="crIndex = $index")
+          li.list-group-item
+            h4 {{cr.name}}
+            h5 {{cr.position}}
+            h5.text-muted {{cr.start_date}} to {{cr.end_date}}
+            p Description
+            ul(ng-repeat="dc in career[crIndex].desc")
+              li {{dc}}

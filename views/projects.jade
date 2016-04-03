@@ -10,7 +10,7 @@ block content
       br
 
       div(ng-repeat="repo in repos" ng-init="repoIndex = $index")
-          div.card.col-md-6.col-xs-12
+          div.card.col-md-6.col-xs-12.animated.fadeInUp
             div.panel.panel-default
               div.panel-body
                 a(href="{{repo.html_url}}" target="_blank")
