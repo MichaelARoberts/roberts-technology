@@ -63,3 +63,33 @@ app.controller('aboutController', function($scope){
     }
   ]
 })
+
+app.controller('resourcesController', function($scope){
+  $scope.frameworks = [
+    {
+      name: 'JQuery',
+      site: 'https://jquery.com/'
+    },
+    {
+      name: 'AngularJS',
+      site: 'https://angularjs.org/'
+    },
+    {
+      name: 'Bootstrap',
+      site: 'http://getbootstrap.com/'
+    },
+    {
+      name: 'Animate.CSS',
+      site: 'https://daneden.github.io/animate.css/'
+    },
+    {
+      name: 'Express',
+      site: 'http://expressjs.com/'
+    },
+    {
+      name: 'Flask',
+      site: 'http://flask.pocoo.org/'
+    }
+  ]
+
+})

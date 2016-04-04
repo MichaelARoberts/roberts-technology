@@ -2,7 +2,16 @@ extends layout
 
 block content
   div.container(ng-app="app" ng-controller="aboutController")
-    div.col-md-6.col-xs-12.animated.fadeInLeft
+    div.col-md-12.col-xs-12
+      div(style="padding:1rem;").panel.panel-default.animated.fadeIn
+        h3(style="text-align:center;") About    
+        p(style="text-align:center;")
+          | I'm a student at Champlain College studying Digital Forensics.
+          br
+          | I'm also a full-stack developer that works on the MEAN stack, but also loves Python.
+          br
+          | I make software that draws from my forensic knowledge.
+    div.col-md-6.col-xs-12.animated.fadeIn
       div.panel.panel-default
         h3(style="text-align:center;")
           i(style="padding-right:2rem;").fa.fa-graduation-cap.fa-lg
@@ -17,8 +26,8 @@ block content
             p Classes
             ul(ng-repeat="class in education[edIndex].classes")
               li {{class}}
-         
-    div.col-md-6.col-xs-12.animated.fadeInRight
+              
+    div.col-md-6.col-xs-12.animated.fadeIn
       div.panel.panel-default
         h3(style="text-align:center;")
           i(style="padding-right:2rem;").fa.fa-briefcase.fa-lg

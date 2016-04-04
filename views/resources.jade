@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container(ng-app="app" ng-controller="resourcesController")
+    div.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+      h2 Resources
+    div.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+      h3 Frameworks
+      div(ng-repeat="fw in frameworks")
+        a(href="{{fw.site}}" target="_blank") {{fw.name}}

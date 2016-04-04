@@ -2,15 +2,12 @@ extends layout
 
 block content
   div.container(ng-app="app" ng-controller="projectController")
-  
-    div.col-md-12.col-sm-12(style="margin-bottom:5rem;")
-        
+    div.col-md-12.col-sm-12.col-xs-12(style="margin-bottom:5rem;")
       h2(style="text-align:center;") Github 
         i.fa.fa-github
       br
-
       div(ng-repeat="repo in repos" ng-init="repoIndex = $index")
-          div.card.col-md-6.col-xs-12.animated.fadeInUp
+          div.card.col-md-6.col-sm-12.col-xs-12.animated.fadeInUp
             div.panel.panel-default
               div.panel-body
                 a(href="{{repo.html_url}}" target="_blank")
