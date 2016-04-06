@@ -2,6 +2,22 @@ extends layout
 
 block content
   div.container(ng-app="app" ng-controller="projectController")
+    div.col-md-12.col-sm-12.col-xs-12.animated.fadeIn
+      h2(style="text-align:center;") Projects
+      div.panel.panel-default
+        div.panel-body
+          h4(style="text-align:center;").card-title Video Games and Tabletop Games
+          p.card-text In addition to my Github profile I've worked on video games, as well as tabletop games.
+            | I've published a mod toolkit for Fallout 4, that you can find <a target="_blank" href="http://www.nexusmods.com/fallout4/mods/2776/?">
+            | here </a>. I worked on a development team whose goal it was to create a game to teach digital citizenship in 
+            | schools in Burlington, Vermont. During my senior year of highschool I developed and marketed a card game
+            | titled Blackspot, available <a target="_blank" href="https://www.thegamecrafter.com/games/blackspot">here</a>.
+          h4(style="text-align:center;").card-title Private GitHub Repositories
+          p.card-text Most of the projects you'll find on this page are pulled live from GitHub.
+            | however, there are many projects I've worked on that exsist in private repositories
+            | some of these include <em>Icila</em>, a spealized social media app help travellers connect. 
+            | I'm also currently working on <em>Mod Honey</em>, as SaS system for distributing game mods.
+          br
     div.col-md-12.col-sm-12.col-xs-12(style="margin-bottom:5rem;")
       h2(style="text-align:center;") Github 
         i.fa.fa-github

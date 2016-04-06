@@ -29,6 +29,7 @@ app.controller('aboutController', function($scope){
         'Intro to Networking',
         'Systems Software',
         'Criminal Law',
+        'Intro to Programming',
         'Cyber Crime and Digital Investigation',
         'Law of Digtial Evidence',
         'Intro to Computer Theory',
